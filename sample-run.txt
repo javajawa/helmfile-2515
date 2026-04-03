@@ -1,0 +1,51 @@
++ rm -rf ./build received-input
++ helmfile template --post-renderer ./filter
+Adding repo prometheus-community https://prometheus-community.github.io/helm-charts
+"prometheus-community" has been added to your repositories
+
+Templating release=prom-norbac-ubuntu, chart=prometheus-community/prometheus
+---
+# Source: nya.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nya
+
++ wc received-input
+    1279    2359   37782 received-input
++ rm -rf ./build received-input
++ helmfile template --post-renderer ./filter --output-dir-template './build/{{.Release.Name}}'
+Adding repo prometheus-community https://prometheus-community.github.io/helm-charts
+"prometheus-community" has been added to your repositories
+
+Templating release=prom-norbac-ubuntu, chart=prometheus-community/prometheus
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/alertmanager/templates/serviceaccount.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/kube-state-metrics/templates/serviceaccount.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/prometheus-node-exporter/templates/serviceaccount.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/prometheus-pushgateway/templates/serviceaccount.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/templates/serviceaccount.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/alertmanager/templates/configmap.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/templates/cm.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/templates/pvc.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/kube-state-metrics/templates/role.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/kube-state-metrics/templates/clusterrolebinding.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/alertmanager/templates/services.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/alertmanager/templates/services.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/kube-state-metrics/templates/service.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/prometheus-node-exporter/templates/service.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/prometheus-pushgateway/templates/service.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/templates/service.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/prometheus-node-exporter/templates/daemonset.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/kube-state-metrics/templates/deployment.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/prometheus-pushgateway/templates/deployment.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/templates/deploy.yaml
+wrote ./build/prom-norbac-ubuntu/prometheus/charts/alertmanager/templates/statefulset.yaml
+---
+# Source: nya.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nya
+
++ wc received-input
+       0       0       0 received-input

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cat >received-input
+
+printf -- "---\n# Source: nya.yaml\napiVersion: v1\nkind: Namespace\nmetadata:\n  name: nya\n"
